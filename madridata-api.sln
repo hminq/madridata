@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api-dotnet", "api-dotnet", "{E76D9C51-D590-4F6B-BF8B-3FB103F71F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "madridata-api", "api-dotnet\madridata-api\madridata-api.csproj", "{C871E0AB-CEAA-4F85-900C-F595D261AA64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C871E0AB-CEAA-4F85-900C-F595D261AA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C871E0AB-CEAA-4F85-900C-F595D261AA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C871E0AB-CEAA-4F85-900C-F595D261AA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C871E0AB-CEAA-4F85-900C-F595D261AA64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C871E0AB-CEAA-4F85-900C-F595D261AA64} = {E76D9C51-D590-4F6B-BF8B-3FB103F71F81}
+	EndGlobalSection
+EndGlobal
