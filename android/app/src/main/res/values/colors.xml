@@ -13,4 +13,8 @@
     <color name="on_error_light">#FFFFFF</color>
     <color name="on_error_dark">#690005</color>
     <color name="white_fixed">#FFFFFF</color>
+    <color name="royal_orange">#C75200</color>
+    <color name="royal_copper">#FF9E66</color>
+    <color name="on_royal_orange">#FFFFFF</color>
+    <color name="on_royal_copper">#05080C</color>
 </resources>

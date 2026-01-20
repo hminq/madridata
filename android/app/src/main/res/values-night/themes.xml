@@ -16,5 +16,8 @@
         <item name="colorOnError">@color/on_error_dark</item>
         <item name="android:statusBarColor">@color/bg_dark_obsidian</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/project_font</item>
+        <item name="colorTertiary">@color/royal_copper</item>
+        <item name="colorOnTertiary">@color/on_royal_copper</item>
     </style>
 </resources>
