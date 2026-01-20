@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.onboarding.PermissionFragment"
+    android:background="@color/bg_dark_obsidian"
+    android:paddingHorizontal="32dp"
+    android:paddingBottom="32dp"
+    android:paddingTop="64dp">
+
+    <include
+        android:id="@+id/includeObd3"
+        layout="@layout/item_obd_3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvPlayerImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="64dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/royal_orange">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivPlayerImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/vini"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Circular"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvGol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvPlayerImage"
+        android:layout_marginTop="16dp"
+        android:textSize="32dp"
+        android:textColor="@color/ice_blue_pure"
+        android:text="Gooooool de"
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:id="@+id/tvPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGol"
+        android:textSize="36dp"
+        android:textColor="@color/royal_orange"
+        android:text="Vinicius Jr"
+        android:textStyle="bold|italic"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/surface_dark_gunmetal"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayerName"
+        android:layout_marginTop="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_icon"
+                android:backgroundTint="@color/royal_orange"
+                android:src="@drawable/icon_noti"
+                app:tint="@color/on_royal_orange"
+                android:padding="6dp"/>
+
+            <TextView
+                android:id="@+id/tvNeverMiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivNotification"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/ice_blue_pure"
+                android:text="Never miss a moment"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvPermissionAsk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNeverMiss"
+                android:textColor="@color/slate_blue_light"
+                android:text="Enable notifications to get instant goal alerts and match updates"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnEnableNoti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="48dp"
+        android:text="Turn On Notifications"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/on_royal_orange"
+        android:background="@drawable/bg_rounded_corner"
+        app:backgroundTint="@color/royal_orange"/>
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/slate_blue_light"
+        android:text="Skip for now"
+        android:textStyle="normal"
+        android:textSize="14sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
