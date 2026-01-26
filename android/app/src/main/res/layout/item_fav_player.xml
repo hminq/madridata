@@ -40,12 +40,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Forward"
-                android:textColor="?attr/colorOnSurface"
+                android:textColor="@color/royal_copper"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivPlayerImage"
-                tools:textColor="@color/royal_copper" />
+                app:layout_constraintTop_toBottomOf="@id/ivPlayerImage" />
 
             <TextView
                 android:id="@+id/tvPlayerName"

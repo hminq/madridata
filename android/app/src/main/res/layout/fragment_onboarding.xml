@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".presentation.onboarding.OnboardingFragment"
-        android:paddingHorizontal="32dp"
-        android:background="@drawable/bg_onboarding_faded">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.onboarding.OnboardingFragment"
+    android:paddingHorizontal="32dp"
+    android:background="@drawable/bg_onboarding_faded">
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/tvText"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="64dp"
-            android:text="¡Hala Madrid!"
-            android:textSize="44dp"
-            android:textStyle="bold"
-            android:textColor="@color/on_royal_orange"/>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="64dp"
+        android:text="@string/hala_madrid"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        android:textColor="@color/on_royal_orange"/>
 
-        <TextView
-            android:id="@+id/tvText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/includeObd1"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="16dp"
-            android:text="The ultimate companion app for \nevery Madridista."
-            android:textSize="16sp"
-            android:textStyle="normal"
-            android:textColor="@color/on_royal_orange"/>
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/includeObd1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="@string/onboarding_title"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textColor="@color/on_royal_orange"/>
 
-        <include
-            android:id="@+id/includeObd1"
-            layout="@layout/item_obd_1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/btnStart"
-            android:layout_marginBottom="16dp"/>
+    <include
+        android:id="@+id/includeObd1"
+        layout="@layout/item_obd_1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        android:layout_marginBottom="16dp"/>
 
-        <Button
-            android:id="@+id/btnStart"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="48dp"
-            android:text="Get Started"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textAllCaps="false"
-            android:textColor="@color/on_royal_orange"
-            android:background="@drawable/bg_rounded_corner"
-            app:backgroundTint="@color/royal_orange"/>
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="64dp"
+        android:text="Get Started"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/on_royal_orange"
+        android:background="@drawable/bg_rounded_corner"
+        app:backgroundTint="@color/royal_orange"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    <TextView
+        android:id="@+id/tvAlready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:text="Already had an account ?"
+        android:textColor="@color/ice_blue_pure"
+        android:textSize="13sp"
+        android:textStyle="italic"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

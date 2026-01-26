@@ -3,7 +3,7 @@
     <!-- Background Image -->
     <item>
         <bitmap
-            android:src="@drawable/image_onboarding1"
+            android:src="@drawable/image_onboarding"
             android:gravity="fill"/>
     </item>
     
