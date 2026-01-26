@@ -1,9 +1,17 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
-    kotlin("plugin.serialization") version "2.0.21"
+}
+
+val localProperties = Properties().apply {
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        load(localPropertiesFile.inputStream())
+    }
 }
 
 android {
@@ -20,6 +28,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val apiBaseUrl = localProperties.getProperty("API_BASE_URL") ?: "http://10.0.2.2:5004/api/"
+        buildConfigField("String", "API_BASE_URL", "\"$apiBaseUrl\"")
     }
 
     buildTypes {
@@ -32,7 +43,6 @@ android {
         }
     }
     buildFeatures {
-        dataBinding = true
         viewBinding = true
         buildConfig = true
     }
@@ -46,18 +56,24 @@ android {
 }
 
 dependencies {
+    //Coil for image loading
+    implementation(libs.coil)
+    implementation(libs.coil.network.okhttp)
     //Hilt for DI
-    implementation("com.google.dagger:hilt-android:2.57.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.57.1")
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
     // Retrofit for API calling
     implementation(libs.retrofit2.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+    // Gson for JSON parsing
+    implementation(libs.gson)
+    // ViewModel
+    implementation(libs.lifecycle.viewmodel.ktx)
     // Views/Fragments integration
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.navigation.ui)
     // Feature module support for Fragments
     implementation(libs.androidx.navigation.dynamic.features.fragment)
-    // JSON serialization library, works with the Kotlin serialization plugin
-    implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
